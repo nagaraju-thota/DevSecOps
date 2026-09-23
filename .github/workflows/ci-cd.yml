@@ -1,0 +1,12 @@
+name: CI/CD Pipeline
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      APP_NAME: my-app
+    steps:
+      - name: printing thr local environment variables
+        run: 'echo "APP_NAME: ${{ env.APP_NAME }}"'
